@@ -35,7 +35,7 @@ class myArray {
     shift(){
         const newArr = new myArray();
         for(let i = 1; i < this.length; i++){
-            newArr.push(this[i++]);
+            newArr.push(this[i]);
         }
         this.length--;
         return newArr;
