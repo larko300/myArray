@@ -6,4 +6,10 @@ class myArray {
             this[i] = arguments[i];
         }
     }
+    push(){
+        for(let i = 0; i < arguments.length; i++){
+            this[this.length] = arguments[i];
+            this.length++;
+        }
+    }
 }
