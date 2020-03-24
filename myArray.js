@@ -24,4 +24,12 @@ class myArray {
         }
         return newArr;
     }
+    pop(){
+        this.length--;
+        const newArr = new myArray();
+        for(let i = 0; i < this.length; i++){
+            newArr.push(this[i]);
+        }
+        return newArr;
+    }
 }
