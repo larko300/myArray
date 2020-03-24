@@ -17,4 +17,11 @@ class myArray {
             cb(this[i], i, this);
         }
     }
+    map(cb){
+        const newArr = new myArray();
+        for(let i = 0; i < this.length; i++){
+            newArr.push(cb(this[i], i, this));
+        }
+        return newArr;
+    }
 }
