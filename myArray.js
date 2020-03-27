@@ -35,9 +35,28 @@ class myArray {
     shift(){
         const newArr = new myArray();
         for(let i = 1; i < this.length; i++){
-            newArr.push(this[i++]);
+            newArr.push(this[i]);
         }
         this.length--;
         return newArr;
+    }
+    unshift(){
+        if(arguments.length !== 0){
+            const Arr = new myArray();
+            for(let i = this.length + arguments.length - 1; i >= 0; i--){
+                Arr.push(this[i]);
+            }
+            const newArr = new myArray();
+            for(let i = 0; i < this.length + arguments.length; i++){
+                if(Arr[i] == undefined){
+                    newArr.push(arguments[i]);                    }
+            }
+            for(let i = this.length + arguments.length; i > 0; i--){
+                if(Arr[i] !== undefined){
+                    newArr.push(Arr[i]);
+                }
+            }
+            return newArr;
+        }
     }
 }
